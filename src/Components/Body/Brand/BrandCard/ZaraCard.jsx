@@ -31,7 +31,7 @@ const ZaraCard = ({ZaraCards}) => {
                     <p>{shortDescription}</p>
                     <div className="card-actions justify-end mt-4">
                     <Link to={`/UpdateProducat/${_id}`} ><div className="badge badge-outline"><button>Update</button></div></Link>
-                        <div className="badge badge-outline"><button>Details</button></div>
+                    <Link to={`/Details/${_id}`} ><div className="badge badge-outline"><button>Details</button></div></Link>
                     </div>
                 </div>
             </div>

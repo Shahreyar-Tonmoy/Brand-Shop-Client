@@ -13,6 +13,7 @@ import HM from "../Components/Body/Brand/HM";
 import Levie from "../Components/Body/Brand/Levies";
 import Levies from "../Components/Body/Brand/Levies";
 import UpdateProduct from "../Components/Home/AddProduct/UpdateProduct";
+import BrandCardDetails from "../Components/Body/Brand/BrandCard/BrandCardDetails/BrandCardDetails";
 
 
 
@@ -77,6 +78,12 @@ const Router = createBrowserRouter([
         {
             path : "/UpdateProducat/:id",
             element : <UpdateProduct></UpdateProduct>,
+            loader : ({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
+           
+        },
+        {
+            path : "/Details/:id",
+            element : <BrandCardDetails></BrandCardDetails>,
             loader : ({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
            
         },
