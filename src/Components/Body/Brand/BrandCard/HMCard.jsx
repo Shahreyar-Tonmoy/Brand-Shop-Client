@@ -1,4 +1,7 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 
+import { Link } from 'react-router-dom';
 
 const HMCard = ({HMCards}) => {
     const {name,brand,photoURL,type,price,shortDescription,rating,_id} = HMCards
@@ -27,7 +30,7 @@ const HMCard = ({HMCards}) => {
                     </h2>
                     <p>{shortDescription}</p>
                     <div className="card-actions justify-end mt-4">
-                        <div className="badge badge-outline"><button>Update</button></div>
+                    <Link to={`/UpdateProducat/${_id}`} ><div className="badge badge-outline"><button>Update</button></div></Link>
                         <div className="badge badge-outline"><button>Details</button></div>
                     </div>
                 </div>

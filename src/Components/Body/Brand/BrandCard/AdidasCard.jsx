@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom';
 
 
 const AdidasCard = ({AdidasCards}) => {
@@ -29,7 +31,7 @@ const AdidasCard = ({AdidasCards}) => {
                     </h2>
                     <p>{shortDescription}</p>
                     <div className="card-actions justify-end mt-4">
-                        <div className="badge badge-outline"><button>Update</button></div>
+                    <Link to={`/UpdateProducat/${_id}`} ><div className="badge badge-outline"><button>Update</button></div></Link>
                         <div className="badge badge-outline"><button>Details</button></div>
                     </div>
                 </div>
@@ -40,3 +42,4 @@ const AdidasCard = ({AdidasCards}) => {
 };
 
 export default AdidasCard;
+

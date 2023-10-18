@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
+import { Link } from 'react-router-dom';
 
 const ZaraCard = ({ZaraCards}) => {
     const {name,brand,photoURL,type,price,shortDescription,rating,_id} = ZaraCards
@@ -28,7 +30,7 @@ const ZaraCard = ({ZaraCards}) => {
                     </h2>
                     <p>{shortDescription}</p>
                     <div className="card-actions justify-end mt-4">
-                        <div className="badge badge-outline"><button>Update</button></div>
+                    <Link to={`/UpdateProducat/${_id}`} ><div className="badge badge-outline"><button>Update</button></div></Link>
                         <div className="badge badge-outline"><button>Details</button></div>
                     </div>
                 </div>
