@@ -18,7 +18,7 @@ const Addproduct = () => {
         console.log(products);
 
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product', {
         method: 'POST',
         headers: {
             "content-type": 'application/json'

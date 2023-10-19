@@ -1,10 +1,47 @@
 /* eslint-disable no-unused-vars */
 
+import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../../../Login/Firebase/AuthProvider';
 
 const BrandCardDetails = () => {
     const Details =useLoaderData()
-    const {name,brand,photoURL,type,price,shortDescription,rating,_id} = Details
+    const { user } = useContext(AuthContext)
+    const email= user.email;
+    console.log(email);
+    const {name,brand,photoURL,type,price,shortDescription,rating,_id,} = Details
+
+    const handleMyCart=()=>{
+        const cart = { name, brand, type, price, shortDescription, rating, photoURL,email }
+        
+        fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/mycart', {
+        method: 'POST',
+        headers: {
+            "content-type": 'application/json'
+        },
+        body: JSON.stringify(cart)
+    })
+    .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Add Cart Succesfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+                  
+                  
+            }
+        })
+
+
+
+    }
+
+
     return (
         <div>
             <div className="mx-auto max-w-screen-xl px-9 py-12">
@@ -16,7 +53,7 @@ const BrandCardDetails = () => {
                         <div className="mt-[28rem] lg:mr-[62rem]">
 
 
-                            <button  className="px-6 py-4 rounded-md btn border-none text-white bg-[#FF444A] hover:bg-[#FF444A]">Add To Cart</button>
+                            <button onClick={handleMyCart}  className="px-6 py-4 rounded-md btn border-none text-white bg-[#FF444A] hover:bg-[#FF444A]">Add To Cart</button>
                         </div>
                     </div>
                 </div>

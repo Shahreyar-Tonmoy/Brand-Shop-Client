@@ -22,7 +22,7 @@ const UpdateProduct = () => {
         console.log(products);
 
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product/${_id}`, {
         method: 'PUT',
         headers: {
             "content-type": 'application/json'

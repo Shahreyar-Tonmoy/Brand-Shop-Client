@@ -17,6 +17,7 @@ import BrandCardDetails from "../Components/Body/Brand/BrandCard/BrandCardDetail
 import Register from "../Components/Login/Register";
 import SignIn from "../Components/Login/SignIn";
 import PrivateRoute from "../Components/Login/PrivateRoute";
+import MyCart from "../Components/MyCart/MyCart";
 
 
 
@@ -33,61 +34,67 @@ const Router = createBrowserRouter([
         },
         {
             path : "/Addproduct",
-            element : <Addproduct></Addproduct>,
+            element : <PrivateRoute><Addproduct></Addproduct></PrivateRoute>,
            
         },
         {
             path : "/Nike",
             element :<PrivateRoute><Nike></Nike></PrivateRoute> ,
-            loader : () =>fetch('http://localhost:5000/product')
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
            
         },
         {
             path : "/Adidas",
             element : <PrivateRoute><Adidas></Adidas></PrivateRoute>,
-            loader : () =>fetch('http://localhost:5000/product')
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
            
         },
         {
             path : "/Gucci",
             element : <PrivateRoute><Gucci></Gucci></PrivateRoute>,
-            loader : () =>fetch('http://localhost:5000/product')
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
            
         },
         {
             path : "/Zara",
             element : <PrivateRoute><Zara></Zara></PrivateRoute>,
-            loader : () =>fetch('http://localhost:5000/product')
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
            
         },
         {
             path : "/H&M",
             element :<PrivateRoute><HM></HM></PrivateRoute> ,
-            loader : () =>fetch('http://localhost:5000/product')
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+           
+        },
+        {
+            path : "/mycart",
+            element :<PrivateRoute><MyCart></MyCart></PrivateRoute> ,
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/mycart')
            
         },
         {
             path : "/Levi's",
             element : <PrivateRoute><Levies></Levies></PrivateRoute>,
-            loader : () =>fetch('http://localhost:5000/product')
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
            
         },
         {
             path : "/Ourproduct",
             element : <Ourproduct></Ourproduct>,
-            loader : () =>fetch('http://localhost:5000/product')
+            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
            
         },
         {
             path : "/UpdateProducat/:id",
             element : <UpdateProduct></UpdateProduct>,
-            loader : ({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
+            loader : ({params}) =>fetch(`https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product/${params.id}`)
            
         },
         {
             path : "/Details/:id",
             element : <BrandCardDetails></BrandCardDetails>,
-            loader : ({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
+            loader : ({params}) =>fetch(`https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product/${params.id}`)
            
         },
         {

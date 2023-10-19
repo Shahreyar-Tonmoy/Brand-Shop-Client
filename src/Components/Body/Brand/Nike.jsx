@@ -5,7 +5,7 @@ import NikeSlider from "../../Slider/NikeSlider";
 
 const Nike = () => {
     const data = useLoaderData()
-    const filter = data.filter(e => e.brand.includes("Nike"))
+    const filter = data?.filter(e => e.brand.includes("Nike"))
 
     return (
         <div>

@@ -80,7 +80,7 @@ const Header = () => {
                         </li>
                         <li className="block p-1 font-sans text-lg font-bold leading-normal text-inherit antialiased">
                             <NavLink
-                                to="/"
+                                to="/mycart"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-[#000000]  underline" : ""
                                 }

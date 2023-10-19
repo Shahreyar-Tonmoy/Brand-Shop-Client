@@ -31,8 +31,8 @@ const Register = () => {
         const photo = e.target.photo.value
 
         if (!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}/.test(password)) {
-            setError("Minimum eight characters, at least one letter, one number and one special character");
-            swal("Error!", `Minimum eight characters, at least one letter, one number and one special character`, "error");
+            setError("Minimum six characters, at least one letter, one number and one special character");
+            swal("Error!", `Minimum six characters, at least one letter, one number and one special character`, "error");
 
         }
         else {

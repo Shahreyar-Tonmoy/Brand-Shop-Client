@@ -2,6 +2,12 @@
 
 import { Link } from 'react-router-dom';
 import bgImg from '../../assets/xcat_fw23_holiday_matchingsets_oct_onsite_mh_lg_group_d_63eb8a3a23.jpg';
+import Adidas from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Adidas.png"
+import Nike from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Nike.png"
+import Zara from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Zara.png"
+import Gucci from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Gucci.png"
+import HM from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/HM.png"
+import Levis from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Levis.png"
 
 
 const Body = () => {
@@ -35,7 +41,7 @@ const Body = () => {
                             <Link to="/Nike" className=' hover:underline'>
                                 <div className="card w-96  ">
                                     <figure className="px-10 pt-10">
-                                        <img src="/src/assets/Brand img/Nike.png" alt="" className="rounded-xl w-44" />
+                                        <img src={Nike} alt="" className="rounded-xl w-44" />
                                     </figure>
                                     <div className="card-body items-center text-center -mt-12">
                                         <h2 className="text-7xl">Nike</h2>
@@ -45,7 +51,7 @@ const Body = () => {
                             <Link to="/Adidas" className='hover:underline'>
                                 <div className="card w-96  ">
                                     <figure className="px-10 pt-10">
-                                        <img src="/src/assets/Brand img/Adidas.png" alt="" className="rounded-xl w-56" />
+                                        <img src={Adidas} alt="" className="rounded-xl w-56" />
                                     </figure>
                                     <div className="card-body items-center text-center">
                                         <h2 className="text-7xl">Adidas</h2>
@@ -56,7 +62,7 @@ const Body = () => {
                             <Link to="/Gucci" className='hover:underline'>
                                 <div className="card w-96  ">
                                     <figure className="px-10 pt-10">
-                                        <img src="/src/assets/Brand img/Gucci.png" alt="" className="rounded-xl w-44" />
+                                        <img src={Gucci} alt="" className="rounded-xl w-44" />
                                     </figure>
                                     <div className="card-body items-center text-center">
                                         <h2 className="text-7xl">Gucci</h2>
@@ -68,7 +74,7 @@ const Body = () => {
                             <Link to="/Zara" className='hover:underline'>
                                 <div className="card w-96  ">
                                     <figure className="px-10 pt-10">
-                                        <img src="/src/assets/Brand img/Zara.png" alt="" className="rounded-xl w-48" />
+                                        <img src={Zara} alt="" className="rounded-xl w-48" />
                                     </figure>
                                     <div className="card-body items-center text-center mt-10">
                                         <h2 className="text-7xl">Zara</h2>
@@ -79,7 +85,7 @@ const Body = () => {
                             <Link to="/H&M" className='hover:underline'>
                                 <div className="card w-96  ">
                                     <figure className="px-10 pt-10">
-                                        <img src="/src/assets/Brand img/HM.png" alt="" className="rounded-xl w-48" />
+                                        <img src={HM} alt="" className="rounded-xl w-48" />
                                     </figure>
                                     <div className="card-body items-center text-center">
                                         <h2 className="text-7xl">H&M</h2>
@@ -90,7 +96,7 @@ const Body = () => {
                             <Link to="/Levi's" className='hover:underline'>
                                 <div className="card w-96  ">
                                     <figure className="px-10 pt-10">
-                                        <img src="/src/assets/Brand img/Levis.png" alt="" className="rounded-xl w-40" />
+                                        <img src={Levis} alt="" className="rounded-xl w-40" />
                                     </figure>
                                     <div className="card-body items-center text-center -mt-10">
                                         <h2 className="text-7xl">Levi's</h2>
