@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import { useLoaderData } from 'react-router-dom';
 
@@ -15,7 +16,7 @@ const BrandCardDetails = () => {
                         <div className="mt-[28rem] lg:mr-[62rem]">
 
 
-                            <button  className="px-6 py-4 rounded-md text-white bg-[#FF444A]">Price ${price}</button>
+                            <button  className="px-6 py-4 rounded-md btn border-none text-white bg-[#FF444A] hover:bg-[#FF444A]">Add To Cart</button>
                         </div>
                     </div>
                 </div>

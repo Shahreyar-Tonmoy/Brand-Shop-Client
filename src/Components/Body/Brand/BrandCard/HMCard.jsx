@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+import { Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const HMCard = ({HMCards}) => {
@@ -28,6 +29,7 @@ const HMCard = ({HMCards}) => {
                         Price : ${price}
                         
                     </h2>
+                    <Rating name="half-rating" defaultValue={rating} precision={0.5} />
                     <p>{shortDescription}</p>
                     <div className="card-actions justify-end mt-4">
                     <Link to={`/UpdateProducat/${_id}`} ><div className="badge badge-outline"><button>Update</button></div></Link>

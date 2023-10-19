@@ -14,6 +14,9 @@ import Levie from "../Components/Body/Brand/Levies";
 import Levies from "../Components/Body/Brand/Levies";
 import UpdateProduct from "../Components/Home/AddProduct/UpdateProduct";
 import BrandCardDetails from "../Components/Body/Brand/BrandCard/BrandCardDetails/BrandCardDetails";
+import Register from "../Components/Login/Register";
+import SignIn from "../Components/Login/SignIn";
+import PrivateRoute from "../Components/Login/PrivateRoute";
 
 
 
@@ -35,37 +38,37 @@ const Router = createBrowserRouter([
         },
         {
             path : "/Nike",
-            element :<Nike></Nike> ,
+            element :<PrivateRoute><Nike></Nike></PrivateRoute> ,
             loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Adidas",
-            element : <Adidas></Adidas>,
+            element : <PrivateRoute><Adidas></Adidas></PrivateRoute>,
             loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Gucci",
-            element : <Gucci></Gucci>,
+            element : <PrivateRoute><Gucci></Gucci></PrivateRoute>,
             loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Zara",
-            element : <Zara></Zara>,
+            element : <PrivateRoute><Zara></Zara></PrivateRoute>,
             loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/H&M",
-            element :<HM></HM> ,
+            element :<PrivateRoute><HM></HM></PrivateRoute> ,
             loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Levi's",
-            element : <Levies></Levies>,
+            element : <PrivateRoute><Levies></Levies></PrivateRoute>,
             loader : () =>fetch('http://localhost:5000/product')
            
         },
@@ -86,6 +89,22 @@ const Router = createBrowserRouter([
             element : <BrandCardDetails></BrandCardDetails>,
             loader : ({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
            
+        },
+        {
+            path : "/Register",
+            element : <Register></Register>,
+            
+            
+            
+            
+        },
+        {
+            path : "/SignIn",
+           element: <SignIn></SignIn>
+            
+            
+            
+            
         },
         
         
