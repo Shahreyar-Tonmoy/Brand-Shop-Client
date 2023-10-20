@@ -40,61 +40,61 @@ const Router = createBrowserRouter([
         {
             path : "/Nike",
             element :<PrivateRoute><Nike></Nike></PrivateRoute> ,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+            loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Adidas",
             element : <PrivateRoute><Adidas></Adidas></PrivateRoute>,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+            loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Gucci",
             element : <PrivateRoute><Gucci></Gucci></PrivateRoute>,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+            loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Zara",
             element : <PrivateRoute><Zara></Zara></PrivateRoute>,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+            loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/H&M",
             element :<PrivateRoute><HM></HM></PrivateRoute> ,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+            loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/mycart",
             element :<PrivateRoute><MyCart></MyCart></PrivateRoute> ,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/mycart')
+            loader : () =>fetch('http://localhost:5000/mycart')
            
         },
         {
             path : "/Levi's",
             element : <PrivateRoute><Levies></Levies></PrivateRoute>,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+            loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/Ourproduct",
             element : <Ourproduct></Ourproduct>,
-            loader : () =>fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product')
+            loader : () =>fetch('http://localhost:5000/product')
            
         },
         {
             path : "/UpdateProducat/:id",
             element : <UpdateProduct></UpdateProduct>,
-            loader : ({params}) =>fetch(`https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product/${params.id}`)
+            loader : ({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
            
         },
         {
             path : "/Details/:id",
             element : <BrandCardDetails></BrandCardDetails>,
-            loader : ({params}) =>fetch(`https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product/${params.id}`)
+            loader : ({params}) =>fetch(`http://localhost:5000/product/${params.id}`)
            
         },
         {

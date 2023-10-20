@@ -11,11 +11,12 @@ const BrandCardDetails = () => {
     const email= user.email;
     console.log(email);
     const {name,brand,photoURL,type,price,shortDescription,rating,_id,} = Details
+    
 
     const handleMyCart=()=>{
         const cart = { name, brand, type, price, shortDescription, rating, photoURL,email }
         
-        fetch('https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/mycart', {
+        fetch('http://localhost:5000/mycart', {
         method: 'POST',
         headers: {
             "content-type": 'application/json'
@@ -32,6 +33,7 @@ const BrandCardDetails = () => {
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })
+                  
                   
                   
             }

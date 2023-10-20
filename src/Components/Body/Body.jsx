@@ -8,38 +8,27 @@ import Zara from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand 
 import Gucci from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Gucci.png"
 import HM from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/HM.png"
 import Levis from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Levis.png"
+import BodySlider from '../Slider/BodySlider';
 
 
 const Body = () => {
     return (
         <div>
-            <div className="bg-contain bg-no-repeat min-h-screen" style={{ backgroundImage: `url(${bgImg})` }}>
-                <div className=' text-left pt-60 pl-32'>
-                    <h1 className='text-5xl font-bold text-white'>GIFT STYLE</h1>
-                    <p className='text-white text-lg mt-3'>Find fun matching sets and tracksuits in bold colors<br /> for everyone on your list.</p>
-                    <button
-                        className="flex mt-6 select-none items-center bg-[#701F5E]  gap-3 rounded-md text-base py-3 px-6 text-center align-middle font-sans font-bold uppercase text-white cursor-default"
+            <div>
+                <BodySlider></BodySlider>
 
-                    >
-                        Shop Now
-
-
-
-                    </button>
-
-                </div>
 
             </div>
 
             <div className='flex items-center justify-center'>
-                <div className=''>
-                    <h1 className='text-3xl underline font-semibold'>Popular brand right now</h1>
+                <div className='mt-20'>
+                    <h1 className='text-3xl text-center lg:text-left underline font-semibold'>Popular brand right now</h1>
 
 
                     <div>
-                        <div className='flex mt-10 gap-6'>
+                        <div className='lg:flex mt-10 gap-6'>
                             <Link to="/Nike" className=' hover:underline'>
-                                <div className="card w-96  ">
+                                <div data-aos="fade-up" className="card w-96  ">
                                     <figure className="px-10 pt-10">
                                         <img src={Nike} alt="" className="rounded-xl w-44" />
                                     </figure>
@@ -49,7 +38,7 @@ const Body = () => {
                                     </div>
                                 </div></Link>
                             <Link to="/Adidas" className='hover:underline'>
-                                <div className="card w-96  ">
+                                <div data-aos="fade-up" className="card w-96  ">
                                     <figure className="px-10 pt-10">
                                         <img src={Adidas} alt="" className="rounded-xl w-56" />
                                     </figure>
@@ -60,7 +49,7 @@ const Body = () => {
                                 </div>
                             </Link>
                             <Link to="/Gucci" className='hover:underline'>
-                                <div className="card w-96  ">
+                                <div data-aos="fade-up" className="card w-96  ">
                                     <figure className="px-10 pt-10">
                                         <img src={Gucci} alt="" className="rounded-xl w-44" />
                                     </figure>
@@ -70,9 +59,9 @@ const Body = () => {
                                     </div>
                                 </div></Link>
                         </div>
-                        <div className='flex mt-10 gap-6'>
+                        <div className='lg:flex mt-10 gap-6'>
                             <Link to="/Zara" className='hover:underline'>
-                                <div className="card w-96  ">
+                                <div data-aos="fade-up" className="card w-96  ">
                                     <figure className="px-10 pt-10">
                                         <img src={Zara} alt="" className="rounded-xl w-48" />
                                     </figure>
@@ -83,7 +72,7 @@ const Body = () => {
                                 </div>
                             </Link>
                             <Link to="/H&M" className='hover:underline'>
-                                <div className="card w-96  ">
+                                <div data-aos="fade-up" className="card w-96  ">
                                     <figure className="px-10 pt-10">
                                         <img src={HM} alt="" className="rounded-xl w-48" />
                                     </figure>
@@ -94,7 +83,7 @@ const Body = () => {
                                 </div>
                             </Link>
                             <Link to="/Levi's" className='hover:underline'>
-                                <div className="card w-96  ">
+                                <div data-aos="fade-up" className="card w-96  ">
                                     <figure className="px-10 pt-10">
                                         <img src={Levis} alt="" className="rounded-xl w-40" />
                                     </figure>
@@ -113,7 +102,7 @@ const Body = () => {
 
 
         </div>
-    );
+    )
 };
 
 export default Body;

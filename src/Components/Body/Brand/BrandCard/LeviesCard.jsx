@@ -8,7 +8,7 @@ const LeviesCard = ({LeviesCards}) => {
     const {name,brand,photoURL,type,price,shortDescription,rating,_id} = LeviesCards
     return (
         <div>
-             <div className="card w-96 bg-base-100 shadow-xl">
+             <div className="card w-96 bg-base-100 shadow-xl mx-auto">
                 <figure><img className="h-96 w-96" src={photoURL} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
@@ -29,7 +29,7 @@ const LeviesCard = ({LeviesCards}) => {
                         Price : ${price}
                         
                     </h2>
-                    <Rating name="half-rating" defaultValue={rating} precision={0.5} />
+                    <Rating name="half-rating-read" defaultValue={rating} precision={0.5} readOnly />
                     <p>{shortDescription}</p>
                     <div className="card-actions justify-end mt-4">
                     <Link to={`/UpdateProducat/${_id}`} ><div className="badge badge-outline"><button>Update</button></div></Link>

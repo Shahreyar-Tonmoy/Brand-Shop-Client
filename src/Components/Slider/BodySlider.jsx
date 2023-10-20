@@ -15,20 +15,32 @@ const divStyle = {
 };
 const slideImages = [
     {
-        url: "https://i.ibb.co/dDSqBp1/Clothing-Rack-Boutique-Fashion-Banner-Landscape.png",
+        url: "https://the-post-assets.sgp1.digitaloceanspaces.com/2021/01/Ultraboost-1896x800.jpg",
         
     },
     {
-        url: "https://i.ibb.co/ZxTFS4f/Grey-Brown-Minimalist-Summer-season-collections-Banner-Landscape.png",
+        url: "https://i.ibb.co/kxdxt3X/Screenshot-2023-10-20-140821.png",
         
     },
     {
-        url: "https://i.ibb.co/DD9XnMx/Clothing-Rack-Boutique-Fashion-Banner-Landscape-1.png",
-       
+        url: "https://i.pinimg.com/originals/a8/95/62/a895623e7bbeb9314e715476f4df9afc.jpg",
+        
+    },
+    {
+        url: "https://likeseasons.com/wp-content/uploads/2019/02/BANNER_ZARA.jpg",
+        
+    },
+    {
+        url: "https://i.pinimg.com/originals/42/2a/96/422a9607d5a6e13d28b66af569c7188e.jpg",
+        
+    },
+    {
+        url: "https://authenticvietnam.vn/wp-content/uploads/banner-that-lung-gucci-cua-nuoc-nao-chinh-hang-chia-se-tu-gucci-vietnam.jpg",
+        
     },
 ];
 
-const ZaraSlider = () => {
+const BodySlider = () => {
     return (
         <div>
             <div className="slide-container">
@@ -51,4 +63,4 @@ const ZaraSlider = () => {
     );
 };
 
-export default ZaraSlider;
+export default BodySlider;

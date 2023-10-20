@@ -7,7 +7,7 @@ import { useContext } from "react";
 const PrivateRoute = ({children}) => {
     const { user,loading } = useContext(AuthContext)
     const location = useLocation()
-    console.log(location.pathname);
+   
     if(loading){
         return <span></span>
     }

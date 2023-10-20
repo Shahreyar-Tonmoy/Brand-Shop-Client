@@ -87,7 +87,7 @@ const SignIn = () => {
     return (
         <div  className="bg-cover bg-no-repeat" style={{ backgroundImage: `url(${picture})` }}>
             <div className="max-w-screen-xl mx-auto  py-40 -mt-28 justify-center ">
-            <div className="card glass flex-shrink-0 w-full max-w-sm  ">
+            <div className="card glass flex-shrink-0 w-full max-w-sm mx-auto lg:mx-0  ">
                 {/* <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-[#6C63FF] to-[#6661d4] bg-clip-border text-white shadow-lg shadow-[#7c77db]">
                     <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
                         Sign In

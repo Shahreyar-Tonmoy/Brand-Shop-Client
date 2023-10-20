@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+
 import Swal from "sweetalert2";
 
-const MyCartData = ({ MyCart }) => {
+const MyCartData = ({ MyCart,myCartData,setMyCartData }) => {
+
+    
+
     const { name, brand, photoURL, type, price, shortDescription, rating, _id } = MyCart
 
     const handleDelete = _id => {
@@ -18,7 +22,7 @@ const MyCartData = ({ MyCart }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/mycart/${_id}`,{
+                fetch(`http://localhost:5000/mycart/${_id}`,{
                     method :"DELETE"
                 }
                 
@@ -31,9 +35,19 @@ const MyCartData = ({ MyCart }) => {
                                 'Deleted!',
                                 'Your file has been deleted.',
                                 'success'
+                                
                             )
+                            const remining = myCartData.filter(cart => cart._id !== _id )
+                            setMyCartData(remining)
+                            
+                            
+                            
                         }
+                       
+                        
+                        
                     })
+                    
             }
         })
 
@@ -45,11 +59,11 @@ const MyCartData = ({ MyCart }) => {
 
     return (
         <div>
-            <div className="card card-side bg-base-100 shadow-xl">
+            <div className="card  card-side bg-base-100 shadow-xl">
                 <figure className="w-60 h-60"><img src={photoURL} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
-                    <h2 className="card-title">{brand}</h2>
+                    <h2 className="card-title">Brand: {brand}</h2>
                     <h2 className="card-title">Price: ${price}</h2>
 
                     <div className="card-actions justify-end">

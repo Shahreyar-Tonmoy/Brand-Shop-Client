@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -22,7 +24,7 @@ const UpdateProduct = () => {
         console.log(products);
 
 
-        fetch(`https://adidas-server-side-2cuocl54k-shahreyars-projects.vercel.app/product/${_id}`, {
+        fetch(`http://localhost:5000/product/${_id}`, {
         method: 'PUT',
         headers: {
             "content-type": 'application/json'
@@ -49,44 +51,55 @@ const UpdateProduct = () => {
 
 
     return (
-        <div>
+        <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/QYK0z9t/Blue-Coming-Soon-Banner-Landscape.png)'}}>
+        <div class="hero-overlay bg-opacity-20"></div>
 
 
-            <form onSubmit={handleUpdate} className="card-body bg-[#e264c2cd] rounded-md mx-52 ">
+            <form onSubmit={handleUpdate} className="card-body glass rounded-md lg:mx-52 ">
                 <div className="text-center font-bold text-white">
-                    <h1 className="text-5xl">
+                    <h1 className="lg:text-5xl">
                         Update Product : {name}
                     </h1>
-                    <p className="px-48 mt-5 text-sm">{shortDescription}</p>
+                    <p className="lg:px-48 mt-5 text-sm">{shortDescription}</p>
                 </div>
-                <div className="flex gap-9 mt-10">
+                <div className="lg:flex mx-auto gap-9 mt-10">
                     <div className="">
                         <label className="label">
                             <span className="text-lg ">Name</span>
                         </label>
-                        <input name="name" type="text" defaultValue={name} placeholder="Enter product name" className="input input-bordered w-[500px]" required />
+                        <input name="name" type="text" defaultValue={name} placeholder="Enter product name" className="input input-bordered lg:w-[500px]" required />
                         <label className="label">
                             <span className="text-lg">Brand Name</span>
                         </label>
-                        <input name="brand" type="text" defaultValue={brand} placeholder="Enter Brand Name" className="input input-bordered w-[500px]" required />
+                        {/* <input name="brand" type="text" defaultValue={brand} placeholder="Enter Brand Name" className="input input-bordered lg:w-[500px]" required /> */}
+                        <select name='brand' defaultValue={brand}  className="select select-bordered lg:w-[500px] ">
+                            <option disabled selected>Brand Name</option>
+                            <option>Adidas</option>
+                            <option>Gucci</option>
+                            <option>Levi's</option>
+                            <option>Zara</option>
+                            <option>H&M</option>
+                            <option>Nike</option>
+                        </select>
+
                         <label className="label">
                             <span className="text-lg">Type</span>
                         </label>
-                        <input name="type" type="text" defaultValue={type} placeholder="Enter Type" className="input input-bordered w-[500px]" required />
+                        <input name="type" type="text" defaultValue={type} placeholder="Enter Type" className="input input-bordered lg:w-[500px]" required />
                     </div>
                     <div className="">
                         <label className="label">
                             <span className="text-lg">Price</span>
                         </label>
-                        <input name="price" type="text" defaultValue={price} placeholder="Enter Price" className="input input-bordered w-[500px]" required />
+                        <input name="price" type="text" defaultValue={price} placeholder="Enter Price" className="input input-bordered lg:w-[500px]" required />
                         <label className="label">
                             <span className="text-lg">Short description</span>
                         </label>
-                        <input name="shortDescription" type="text" defaultValue={shortDescription} placeholder="Enter Short description" className="input input-bordered w-[500px]" required />
+                        <input name="shortDescription" type="text" defaultValue={shortDescription} placeholder="Enter Short description" className="input input-bordered lg:w-[500px]" required />
                         <label className="label">
                             <span className="text-lg">Rating</span>
                         </label>
-                        <input name="rating" type="text" defaultValue={rating} placeholder="Enter Rating" className="input input-bordered w-[500px]" required />
+                        <input name="rating" type="text" defaultValue={rating} placeholder="Enter Rating" className="input input-bordered lg:w-[500px]" required />
                     </div>
 
                 </div>

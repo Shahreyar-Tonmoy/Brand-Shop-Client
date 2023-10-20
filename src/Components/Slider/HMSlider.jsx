@@ -2,9 +2,7 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const spanStyle = {
-    padding: "20px",
-    background: "#efefef",
-    color: "#000000",
+    
 };
 
 const divStyle = {
@@ -12,20 +10,21 @@ const divStyle = {
     alignItems: "center",
     justifyContent: "center",
     backgroundSize: "cover",
-    height: "400px",
+    backgroundRepeat  : 'no-repeat',
+    height: "640px",
 };
 const slideImages = [
     {
-        url: "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-        caption: "Slide 1",
+        url: "https://i.ibb.co/7YxWnN2/Grey-Minimalist-Special-Offer-Banner-Landscape.png",
+        
     },
     {
-        url: "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-        caption: "Slide 2",
+        url: "https://i.ibb.co/3dZF4pt/Pink-and-Blue-Modern-Fashion-Banner.png",
+        
     },
     {
-        url: "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-        caption: "Slide 3",
+        url: "https://i.ibb.co/LCnK2z7/Black-Yellow-Bold-Bag-Fashion-Sale-Banner.png",
+        
     },
 ];
 
