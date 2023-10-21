@@ -4,19 +4,20 @@ import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../../Login/Firebase/AuthProvider';
+import { Rating } from '@mui/material';
 
 const BrandCardDetails = () => {
     const Details =useLoaderData()
     const { user } = useContext(AuthContext)
     const email= user.email;
     console.log(email);
-    const {name,brand,photoURL,type,price,shortDescription,rating,_id,} = Details
+    const {name,brand,photoURL,type,price,shortDescription,rating,} = Details
     
 
     const handleMyCart=()=>{
         const cart = { name, brand, type, price, shortDescription, rating, photoURL,email }
         
-        fetch('http://localhost:5000/mycart', {
+        fetch('https://adidas-server-side.vercel.app/mycart', {
         method: 'POST',
         headers: {
             "content-type": 'application/json'
@@ -63,6 +64,16 @@ const BrandCardDetails = () => {
                 <h2 className="mb-2 block mt-14 font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
                     {name}
                 </h2>
+                <h2 className="mb-2 block  font-sans text-xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+                    Brand: {brand}
+                </h2>
+                <h2 className="mb-2 block  font-sans text-xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+                Type: {type}
+                </h2>
+                <h2 className="mb-2 block  font-sans text-xl font-semibold leading-[1.3] tracking-normal text-blue-gray-900 antialiased">
+                    Price: {price}
+                </h2>
+                <Rating name="half-rating-read" defaultValue={rating} precision={0.5} readOnly />
                 <p className="block font-sans text-[15px] font-normal leading-relaxed text-gray-700 antialiased">
                     {shortDescription}
                 </p>

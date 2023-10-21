@@ -1,9 +1,18 @@
+import { Link } from "react-router-dom";
+import Header from "../Components/Header/Header";
 
 
 const Error = () => {
     return (
         <div>
+            <Header></Header>
+            <div>
+            <img className="mx-auto" src="https://i.ibb.co/921jCP8/image-processing20191008-30851-fhz5mc-removebg-preview.png" alt="" />
+            </div>
             
+             <div className="flex justify-center items-center">
+             <Link to={"/"}><button className="btn btn-outline btn-info">Go To Home Page</button></Link>
+             </div>
         </div>
     );
 };

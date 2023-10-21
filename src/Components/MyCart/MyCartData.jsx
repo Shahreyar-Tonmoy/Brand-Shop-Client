@@ -22,7 +22,7 @@ const MyCartData = ({ MyCart,myCartData,setMyCartData }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/mycart/${_id}`,{
+                fetch(`https://adidas-server-side.vercel.app/mycart/${_id}`,{
                     method :"DELETE"
                 }
                 

@@ -24,7 +24,7 @@ const UpdateProduct = () => {
         console.log(products);
 
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://adidas-server-side.vercel.app/product/${_id}`, {
         method: 'PUT',
         headers: {
             "content-type": 'application/json'

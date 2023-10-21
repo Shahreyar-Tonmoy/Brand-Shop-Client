@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { Link } from 'react-router-dom';
-import bgImg from '../../assets/xcat_fw23_holiday_matchingsets_oct_onsite_mh_lg_group_d_63eb8a3a23.jpg';
 import Adidas from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Adidas.png"
 import Nike from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Nike.png"
 import Zara from "/Assignment/Assignment-10/Adidas-client-side/src/assets/Brand img/Zara.png"

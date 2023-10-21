@@ -9,12 +9,7 @@ const spanStyle = {
 };
 
 const divStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundSize: "cover",
-    backgroundRepeat  : 'no-repeat',
-    height: "640px",
+   
 };
 const slideImages = [
     {
@@ -38,7 +33,7 @@ const NikeSlider = () => {
                 <Slide>
                     {slideImages.map((slideImage, index) => (
                         <div key={index}>
-                            <div
+                            <div className="bg-contain bg-no-repeat flex justify-center items-center lg:bg-cover h-64 lg:h-[640px]"
                                 style={{
                                     ...divStyle,
                                     backgroundImage: `url(${ slideImage.url })`,

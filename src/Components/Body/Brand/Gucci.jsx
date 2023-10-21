@@ -22,7 +22,7 @@ const Gucci = () => {
 
 
 
-    }, [])
+    }, [data])
 
     return (
 

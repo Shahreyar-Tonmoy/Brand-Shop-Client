@@ -32,8 +32,9 @@ const HMCard = ({HMCards}) => {
                     <Rating name="half-rating-read" defaultValue={rating} precision={0.5} readOnly />
                     <p>{shortDescription}</p>
                     <div className="card-actions justify-end mt-4">
-                    <Link to={`/UpdateProducat/${_id}`} ><div className="badge badge-outline"><button>Update</button></div></Link>
-                    <Link to={`/Details/${_id}`} ><div className="badge badge-outline"><button>Details</button></div></Link>
+                    <Link to={`/UpdateProducat/${_id}`} ><button className="btn btn-outline btn-info">Update</button>
+                                </Link>
+                            <Link to={`/Details/${_id}`} ><button className="btn btn-outline btn-success">Details</button></Link>
                     </div>
                 </div>
             </div>
