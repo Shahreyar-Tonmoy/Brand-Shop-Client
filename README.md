@@ -3,12 +3,15 @@
 <a href="https://bucolic-genie-cb2e42.netlify.app/">Live Link</a>
 
 
- <p><span>Live link</span>https://bucolic-genie-cb2e42.netlify.app/</p>
+<a href="https://github.com/Shahreyar-Tonmoy/Brand-Shop-Server">Live Link</a>
+
+Technology Used: Rect.js, Node.js, Express.js, Mongodb, Tailwind Css, Firebase
 
 
 
 
 
+Features:
 
 1. Attractive Design:
 
