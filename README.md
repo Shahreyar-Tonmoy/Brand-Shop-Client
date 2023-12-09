@@ -1,17 +1,22 @@
-
+<h1 align="left">Client side live link</h1>
 
 <a href="https://bucolic-genie-cb2e42.netlify.app/">Live Link</a>
 
+<h1 align="left">Server side github link</h1>
 
-<a href="https://github.com/Shahreyar-Tonmoy/Brand-Shop-Server">Server Side Link</a>
+<a href="https://github.com/Shahreyar-Tonmoy/Brand-Shop-Server">Server Side github Link</a>
 
-Technology Used: Rect.js, Node.js, Express.js, Mongodb, Tailwind Css, Firebase
+<h1 align="left">Technology Used:</h1>
+
+ Rect.js, Node.js, Express.js, Mongodb, Tailwind Css, Firebase
+
+<h1 align="left">Description:</h1>
+Brand-shop is a online Fashion store.There is six brand like adidus,nike,zara in home page. After authentication user can add cart product and update specific product. User can see own cart product in my cart route and his profile in profile route.
 
 
+<h1 align="left">Features:</h1>
 
 
-
-Features:
 
 1. Attractive Design:
 
